@@ -108,5 +108,24 @@ namespace CarsForm
         {
             Close();
         }
+
+        private void comboBoxCarType_Validating(object sender, CancelEventArgs e)
+        {
+            if (!comboBoxCarType.Items.Contains(comboBoxCarType.Text))
+            {
+                e.Cancel = true;
+                MessageBox.Show("You must choose type from the car type list!");
+            }
+        }
+
+        private void textBoxMaxSpeed_Validating(object sender, CancelEventArgs e)
+        {
+            int value;
+            if (!(int.TryParse(textBoxMaxSpeed.Text, out value) && value >= 0))
+            {
+                e.Cancel = true;
+                MessageBox.Show("You must type valid number greater than 0!");
+            }
+        }
     }
 }

@@ -58,6 +58,7 @@ namespace CarsForm
         {
             foreach (UpdateableView f in MdiChildren)
                 f.updateView(car, oldCarHashCode, operation);
+            statusStripLabel2.Text = cars.Count().ToString();
         }
 
         private void newCarToolStripMenuItem_Click(object sender, EventArgs e)

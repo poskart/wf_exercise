@@ -60,6 +60,7 @@ namespace CarsForm
                 }
             }
             getFilteredResults();
+            toolStripStatusLabel2.Text = filteredCarsListView.Items.Count.ToString();
         }
 
         public void updateView(List<Car> newCarList)
@@ -78,7 +79,7 @@ namespace CarsForm
                 item.SubItems[2].Text = car.ProductionDate.ToShortDateString();
                 item.SubItems[3].Text = car.Type;
             }
-            filteredCarsListView.Invalidate();
+            toolStripStatusLabel2.Text = filteredCarsListView.Items.Count.ToString();
         }
 
         private void lessFilterCheckBox_CheckedChanged(object sender, EventArgs e)

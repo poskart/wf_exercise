@@ -35,7 +35,11 @@
             this.removeCarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.viewToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.filteredViewToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.statusStrip1 = new System.Windows.Forms.StatusStrip();
+            this.statusStripLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
+            this.statusStripLabel2 = new System.Windows.Forms.ToolStripStatusLabel();
             this.mainMenu.SuspendLayout();
+            this.statusStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // mainMenu
@@ -62,21 +66,21 @@
             // newCarToolStripMenuItem
             // 
             this.newCarToolStripMenuItem.Name = "newCarToolStripMenuItem";
-            this.newCarToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.newCarToolStripMenuItem.Size = new System.Drawing.Size(136, 22);
             this.newCarToolStripMenuItem.Text = "New car";
             this.newCarToolStripMenuItem.Click += new System.EventHandler(this.newCarToolStripMenuItem_Click);
             // 
             // modifyCarToolStripMenuItem
             // 
             this.modifyCarToolStripMenuItem.Name = "modifyCarToolStripMenuItem";
-            this.modifyCarToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.modifyCarToolStripMenuItem.Size = new System.Drawing.Size(136, 22);
             this.modifyCarToolStripMenuItem.Text = "Modify car";
             this.modifyCarToolStripMenuItem.Click += new System.EventHandler(this.modifyCarToolStripMenuItem_Click);
             // 
             // removeCarToolStripMenuItem
             // 
             this.removeCarToolStripMenuItem.Name = "removeCarToolStripMenuItem";
-            this.removeCarToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.removeCarToolStripMenuItem.Size = new System.Drawing.Size(136, 22);
             this.removeCarToolStripMenuItem.Text = "Remove car";
             this.removeCarToolStripMenuItem.Click += new System.EventHandler(this.removeCarToolStripMenuItem_Click);
             // 
@@ -91,15 +95,38 @@
             // filteredViewToolStripMenuItem
             // 
             this.filteredViewToolStripMenuItem.Name = "filteredViewToolStripMenuItem";
-            this.filteredViewToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.filteredViewToolStripMenuItem.Size = new System.Drawing.Size(140, 22);
             this.filteredViewToolStripMenuItem.Text = "Filtered view";
             this.filteredViewToolStripMenuItem.Click += new System.EventHandler(this.filteredViewToolStripMenuItem_Click);
+            // 
+            // statusStrip1
+            // 
+            this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.statusStripLabel1,
+            this.statusStripLabel2});
+            this.statusStrip1.Location = new System.Drawing.Point(0, 526);
+            this.statusStrip1.Name = "statusStrip1";
+            this.statusStrip1.Size = new System.Drawing.Size(883, 22);
+            this.statusStrip1.TabIndex = 1;
+            this.statusStrip1.Text = "s";
+            // 
+            // statusStripLabel1
+            // 
+            this.statusStripLabel1.Name = "statusStripLabel1";
+            this.statusStripLabel1.Size = new System.Drawing.Size(39, 17);
+            this.statusStripLabel1.Text = "Items:";
+            // 
+            // statusStripLabel2
+            // 
+            this.statusStripLabel2.Name = "statusStripLabel2";
+            this.statusStripLabel2.Size = new System.Drawing.Size(0, 17);
             // 
             // CarsForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(883, 548);
+            this.Controls.Add(this.statusStrip1);
             this.Controls.Add(this.mainMenu);
             this.IsMdiContainer = true;
             this.MainMenuStrip = this.mainMenu;
@@ -107,6 +134,8 @@
             this.Text = "Cars";
             this.mainMenu.ResumeLayout(false);
             this.mainMenu.PerformLayout();
+            this.statusStrip1.ResumeLayout(false);
+            this.statusStrip1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -121,6 +150,9 @@
         private System.Windows.Forms.ToolStripMenuItem removeCarToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem viewToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem filteredViewToolStripMenuItem;
+        private System.Windows.Forms.StatusStrip statusStrip1;
+        private System.Windows.Forms.ToolStripStatusLabel statusStripLabel1;
+        private System.Windows.Forms.ToolStripStatusLabel statusStripLabel2;
     }
 }
 

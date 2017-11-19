@@ -63,6 +63,7 @@
             this.textBoxMaxSpeed.Name = "textBoxMaxSpeed";
             this.textBoxMaxSpeed.Size = new System.Drawing.Size(147, 20);
             this.textBoxMaxSpeed.TabIndex = 3;
+            this.textBoxMaxSpeed.Validating += new System.ComponentModel.CancelEventHandler(this.textBoxMaxSpeed_Validating);
             // 
             // labelDate
             // 
@@ -95,6 +96,7 @@
             this.comboBoxCarType.Name = "comboBoxCarType";
             this.comboBoxCarType.Size = new System.Drawing.Size(147, 21);
             this.comboBoxCarType.TabIndex = 6;
+            this.comboBoxCarType.Validating += new System.ComponentModel.CancelEventHandler(this.comboBoxCarType_Validating);
             // 
             // dateTimePickerCarProduction
             // 

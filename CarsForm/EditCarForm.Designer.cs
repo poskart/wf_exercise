@@ -131,6 +131,7 @@
             this.comboBoxCarType.Name = "comboBoxCarType";
             this.comboBoxCarType.Size = new System.Drawing.Size(147, 21);
             this.comboBoxCarType.TabIndex = 10;
+            this.comboBoxCarType.Validating += new System.ComponentModel.CancelEventHandler(this.comboBoxCarType_Validating);
             // 
             // labelType
             // 
@@ -165,6 +166,7 @@
             this.textBoxMaxSpeed.Name = "textBoxMaxSpeed";
             this.textBoxMaxSpeed.Size = new System.Drawing.Size(147, 20);
             this.textBoxMaxSpeed.TabIndex = 4;
+            this.textBoxMaxSpeed.Validating += new System.ComponentModel.CancelEventHandler(this.textBoxMaxSpeed_Validating);
             // 
             // labelMaxSpeed
             // 
