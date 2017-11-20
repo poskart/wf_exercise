@@ -46,10 +46,10 @@
             this.subOption1ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.subOption2ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.option2ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.lessmoreToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.lessToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.moreToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.statusStrip1.SuspendLayout();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -209,14 +209,14 @@
             // lessToolStripMenuItem
             // 
             this.lessToolStripMenuItem.Name = "lessToolStripMenuItem";
-            this.lessToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.lessToolStripMenuItem.Size = new System.Drawing.Size(102, 22);
             this.lessToolStripMenuItem.Text = "Less";
             this.lessToolStripMenuItem.Click += new System.EventHandler(this.lessToolStripMenuItem_Click);
             // 
             // moreToolStripMenuItem
             // 
             this.moreToolStripMenuItem.Name = "moreToolStripMenuItem";
-            this.moreToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.moreToolStripMenuItem.Size = new System.Drawing.Size(102, 22);
             this.moreToolStripMenuItem.Text = "More";
             this.moreToolStripMenuItem.Click += new System.EventHandler(this.moreToolStripMenuItem_Click);
             // 

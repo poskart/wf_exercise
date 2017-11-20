@@ -35,7 +35,9 @@ namespace CarsForm
         public string CarType
         {
             get { return carType; }
-            set { carType = value; }
+            set { carType = value;
+                Invalidate();
+            }
         }
 
         protected override void OnPaint(PaintEventArgs e)

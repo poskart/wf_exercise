@@ -37,7 +37,7 @@
             this.carEditFormOKButton = new System.Windows.Forms.Button();
             this.carEditFormCancelButton = new System.Windows.Forms.Button();
             this.labelMaxSpeed = new System.Windows.Forms.Label();
-            this.carTypeControl1 = new CarTypeControl();
+            this.carTypeControl1 = new CarsForm.CarTypeControl();
             this.SuspendLayout();
             // 
             // labelBrand
