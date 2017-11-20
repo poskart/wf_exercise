@@ -33,11 +33,11 @@
             this.textBoxMaxSpeed = new System.Windows.Forms.TextBox();
             this.labelDate = new System.Windows.Forms.Label();
             this.labelType = new System.Windows.Forms.Label();
-            this.comboBoxCarType = new System.Windows.Forms.ComboBox();
             this.dateTimePickerCarProduction = new System.Windows.Forms.DateTimePicker();
             this.carEditFormOKButton = new System.Windows.Forms.Button();
             this.carEditFormCancelButton = new System.Windows.Forms.Button();
             this.labelMaxSpeed = new System.Windows.Forms.Label();
+            this.carTypeControl1 = new CarTypeControl();
             this.SuspendLayout();
             // 
             // labelBrand
@@ -85,19 +85,6 @@
             this.labelType.TabIndex = 5;
             this.labelType.Text = "Type:";
             // 
-            // comboBoxCarType
-            // 
-            this.comboBoxCarType.FormattingEnabled = true;
-            this.comboBoxCarType.Items.AddRange(new object[] {
-            "Car",
-            "Truck",
-            "Two-wheel vehicle"});
-            this.comboBoxCarType.Location = new System.Drawing.Point(175, 134);
-            this.comboBoxCarType.Name = "comboBoxCarType";
-            this.comboBoxCarType.Size = new System.Drawing.Size(147, 21);
-            this.comboBoxCarType.TabIndex = 6;
-            this.comboBoxCarType.Validating += new System.ComponentModel.CancelEventHandler(this.comboBoxCarType_Validating);
-            // 
             // dateTimePickerCarProduction
             // 
             this.dateTimePickerCarProduction.Location = new System.Drawing.Point(175, 96);
@@ -108,7 +95,7 @@
             // carEditFormOKButton
             // 
             this.carEditFormOKButton.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.carEditFormOKButton.Location = new System.Drawing.Point(79, 180);
+            this.carEditFormOKButton.Location = new System.Drawing.Point(81, 326);
             this.carEditFormOKButton.Name = "carEditFormOKButton";
             this.carEditFormOKButton.Size = new System.Drawing.Size(75, 23);
             this.carEditFormOKButton.TabIndex = 8;
@@ -119,7 +106,7 @@
             // carEditFormCancelButton
             // 
             this.carEditFormCancelButton.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.carEditFormCancelButton.Location = new System.Drawing.Point(221, 180);
+            this.carEditFormCancelButton.Location = new System.Drawing.Point(223, 326);
             this.carEditFormCancelButton.Name = "carEditFormCancelButton";
             this.carEditFormCancelButton.Size = new System.Drawing.Size(75, 23);
             this.carEditFormCancelButton.TabIndex = 9;
@@ -137,6 +124,14 @@
             this.labelMaxSpeed.TabIndex = 2;
             this.labelMaxSpeed.Text = "Max speed: ";
             // 
+            // carTypeControl1
+            // 
+            this.carTypeControl1.CarType = "Car";
+            this.carTypeControl1.Location = new System.Drawing.Point(172, 137);
+            this.carTypeControl1.Name = "carTypeControl1";
+            this.carTypeControl1.Size = new System.Drawing.Size(150, 150);
+            this.carTypeControl1.TabIndex = 10;
+            // 
             // AddCarForm
             // 
             this.AcceptButton = this.carEditFormOKButton;
@@ -145,10 +140,10 @@
             this.BackColor = System.Drawing.SystemColors.Control;
             this.CancelButton = this.carEditFormCancelButton;
             this.ClientSize = new System.Drawing.Size(382, 373);
+            this.Controls.Add(this.carTypeControl1);
             this.Controls.Add(this.carEditFormCancelButton);
             this.Controls.Add(this.carEditFormOKButton);
             this.Controls.Add(this.dateTimePickerCarProduction);
-            this.Controls.Add(this.comboBoxCarType);
             this.Controls.Add(this.labelType);
             this.Controls.Add(this.labelDate);
             this.Controls.Add(this.textBoxMaxSpeed);
@@ -169,10 +164,10 @@
         private System.Windows.Forms.TextBox textBoxMaxSpeed;
         private System.Windows.Forms.Label labelDate;
         private System.Windows.Forms.Label labelType;
-        private System.Windows.Forms.ComboBox comboBoxCarType;
         private System.Windows.Forms.DateTimePicker dateTimePickerCarProduction;
         private System.Windows.Forms.Button carEditFormOKButton;
         private System.Windows.Forms.Button carEditFormCancelButton;
         private System.Windows.Forms.Label labelMaxSpeed;
+        private CarTypeControl carTypeControl1;
     }
 }

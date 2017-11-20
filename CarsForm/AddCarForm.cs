@@ -31,7 +31,7 @@ namespace CarsForm
 
         public string CarType
         {
-            get { return comboBoxCarType.Text; }
+            get { return carTypeControl1.CarType; }
         }
 
         public AddCarForm(CarsForm mainForm)
@@ -66,15 +66,6 @@ namespace CarsForm
             {
                 e.Cancel = true;
                 MessageBox.Show("You must type valid number greater than 0!");
-            }
-        }
-
-        private void comboBoxCarType_Validating(object sender, CancelEventArgs e)
-        {
-            if(!comboBoxCarType.Items.Contains(comboBoxCarType.Text))
-            {
-                e.Cancel = true;
-                MessageBox.Show("You must choose type from the car type list!");
             }
         }
     }

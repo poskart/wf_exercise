@@ -116,5 +116,15 @@ namespace CarsForm
                 this == mainFormHandle.MdiChildren[0])
                 e.Cancel = true;
         }
+
+        private void lessToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            lessFilterCheckBox.Checked = true;
+        }
+
+        private void moreToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            moreFilterCheckBox.Checked = true;
+        }
     }
 }

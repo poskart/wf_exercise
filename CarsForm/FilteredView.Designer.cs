@@ -47,6 +47,9 @@
             this.subOption2ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.option2ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
+            this.lessmoreToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.lessToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.moreToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.statusStrip1.SuspendLayout();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -159,7 +162,8 @@
             // 
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.option1ToolStripMenuItem,
-            this.option2ToolStripMenuItem});
+            this.option2ToolStripMenuItem,
+            this.lessmoreToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(632, 24);
@@ -192,6 +196,29 @@
             this.option2ToolStripMenuItem.Name = "option2ToolStripMenuItem";
             this.option2ToolStripMenuItem.Size = new System.Drawing.Size(62, 20);
             this.option2ToolStripMenuItem.Text = "Option2";
+            // 
+            // lessmoreToolStripMenuItem
+            // 
+            this.lessmoreToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.lessToolStripMenuItem,
+            this.moreToolStripMenuItem});
+            this.lessmoreToolStripMenuItem.Name = "lessmoreToolStripMenuItem";
+            this.lessmoreToolStripMenuItem.Size = new System.Drawing.Size(74, 20);
+            this.lessmoreToolStripMenuItem.Text = "Less/more";
+            // 
+            // lessToolStripMenuItem
+            // 
+            this.lessToolStripMenuItem.Name = "lessToolStripMenuItem";
+            this.lessToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.lessToolStripMenuItem.Text = "Less";
+            this.lessToolStripMenuItem.Click += new System.EventHandler(this.lessToolStripMenuItem_Click);
+            // 
+            // moreToolStripMenuItem
+            // 
+            this.moreToolStripMenuItem.Name = "moreToolStripMenuItem";
+            this.moreToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.moreToolStripMenuItem.Text = "More";
+            this.moreToolStripMenuItem.Click += new System.EventHandler(this.moreToolStripMenuItem_Click);
             // 
             // FilteredView
             // 
@@ -241,5 +268,8 @@
         private System.Windows.Forms.ToolStripMenuItem subOption2ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem option2ToolStripMenuItem;
         private System.ComponentModel.BackgroundWorker backgroundWorker1;
+        private System.Windows.Forms.ToolStripMenuItem lessmoreToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem lessToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem moreToolStripMenuItem;
     }
 }
