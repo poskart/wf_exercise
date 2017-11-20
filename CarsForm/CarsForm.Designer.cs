@@ -108,7 +108,6 @@
             this.statusStrip1.Name = "statusStrip1";
             this.statusStrip1.Size = new System.Drawing.Size(883, 22);
             this.statusStrip1.TabIndex = 1;
-            this.statusStrip1.Text = "s";
             // 
             // statusStripLabel1
             // 
@@ -119,7 +118,8 @@
             // statusStripLabel2
             // 
             this.statusStripLabel2.Name = "statusStripLabel2";
-            this.statusStripLabel2.Size = new System.Drawing.Size(0, 17);
+            this.statusStripLabel2.Size = new System.Drawing.Size(13, 17);
+            this.statusStripLabel2.Text = "0";
             // 
             // CarsForm
             // 
@@ -132,6 +132,7 @@
             this.MainMenuStrip = this.mainMenu;
             this.Name = "CarsForm";
             this.Text = "Cars";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.CarsForm_FormClosing);
             this.mainMenu.ResumeLayout(false);
             this.mainMenu.PerformLayout();
             this.statusStrip1.ResumeLayout(false);

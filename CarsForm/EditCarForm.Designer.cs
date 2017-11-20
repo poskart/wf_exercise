@@ -46,8 +46,20 @@
             this.label1 = new System.Windows.Forms.Label();
             this.carEditFormOKButton = new System.Windows.Forms.Button();
             this.carEditFormCancelButton = new System.Windows.Forms.Button();
+            this.statusStrip1 = new System.Windows.Forms.StatusStrip();
+            this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
+            this.toolStripStatusLabel2 = new System.Windows.Forms.ToolStripStatusLabel();
+            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.option1ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.optionXToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.subOptionX1ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.subOptionX2ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.viewToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.anotherViewToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
+            this.statusStrip1.SuspendLayout();
+            this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // carsListView
@@ -59,7 +71,7 @@
             this.columnHeaderType});
             this.carsListView.Location = new System.Drawing.Point(12, 28);
             this.carsListView.Name = "carsListView";
-            this.carsListView.Size = new System.Drawing.Size(335, 460);
+            this.carsListView.Size = new System.Drawing.Size(335, 454);
             this.carsListView.TabIndex = 0;
             this.carsListView.UseCompatibleStateImageBehavior = false;
             this.carsListView.View = System.Windows.Forms.View.Details;
@@ -227,23 +239,108 @@
             this.carEditFormCancelButton.UseVisualStyleBackColor = true;
             this.carEditFormCancelButton.Click += new System.EventHandler(this.carEditFormCancelButton_Click);
             // 
+            // statusStrip1
+            // 
+            this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripStatusLabel1,
+            this.toolStripStatusLabel2});
+            this.statusStrip1.Location = new System.Drawing.Point(0, 491);
+            this.statusStrip1.Name = "statusStrip1";
+            this.statusStrip1.Size = new System.Drawing.Size(774, 22);
+            this.statusStrip1.TabIndex = 15;
+            this.statusStrip1.Text = "statusStrip1";
+            // 
+            // toolStripStatusLabel1
+            // 
+            this.toolStripStatusLabel1.Name = "toolStripStatusLabel1";
+            this.toolStripStatusLabel1.Size = new System.Drawing.Size(39, 17);
+            this.toolStripStatusLabel1.Text = "Items:";
+            // 
+            // toolStripStatusLabel2
+            // 
+            this.toolStripStatusLabel2.Name = "toolStripStatusLabel2";
+            this.toolStripStatusLabel2.Size = new System.Drawing.Size(13, 17);
+            this.toolStripStatusLabel2.Text = "0";
+            // 
+            // menuStrip1
+            // 
+            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.option1ToolStripMenuItem,
+            this.optionXToolStripMenuItem,
+            this.viewToolStripMenuItem});
+            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip1.Name = "menuStrip1";
+            this.menuStrip1.Size = new System.Drawing.Size(774, 24);
+            this.menuStrip1.TabIndex = 16;
+            this.menuStrip1.Text = "menuStrip1";
+            // 
+            // option1ToolStripMenuItem
+            // 
+            this.option1ToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.subOptionX1ToolStripMenuItem,
+            this.subOptionX2ToolStripMenuItem});
+            this.option1ToolStripMenuItem.Name = "option1ToolStripMenuItem";
+            this.option1ToolStripMenuItem.Size = new System.Drawing.Size(62, 20);
+            this.option1ToolStripMenuItem.Text = "Option1";
+            // 
+            // optionXToolStripMenuItem
+            // 
+            this.optionXToolStripMenuItem.Name = "optionXToolStripMenuItem";
+            this.optionXToolStripMenuItem.Size = new System.Drawing.Size(63, 20);
+            this.optionXToolStripMenuItem.Text = "OptionX";
+            // 
+            // subOptionX1ToolStripMenuItem
+            // 
+            this.subOptionX1ToolStripMenuItem.Name = "subOptionX1ToolStripMenuItem";
+            this.subOptionX1ToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.subOptionX1ToolStripMenuItem.Text = "SubOptionX1";
+            // 
+            // subOptionX2ToolStripMenuItem
+            // 
+            this.subOptionX2ToolStripMenuItem.Name = "subOptionX2ToolStripMenuItem";
+            this.subOptionX2ToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.subOptionX2ToolStripMenuItem.Text = "SubOptionX2";
+            // 
+            // viewToolStripMenuItem
+            // 
+            this.viewToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.anotherViewToolStripMenuItem});
+            this.viewToolStripMenuItem.MergeAction = System.Windows.Forms.MergeAction.MatchOnly;
+            this.viewToolStripMenuItem.Name = "viewToolStripMenuItem";
+            this.viewToolStripMenuItem.Size = new System.Drawing.Size(44, 20);
+            this.viewToolStripMenuItem.Text = "View";
+            // 
+            // anotherViewToolStripMenuItem
+            // 
+            this.anotherViewToolStripMenuItem.Name = "anotherViewToolStripMenuItem";
+            this.anotherViewToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.anotherViewToolStripMenuItem.Text = "AnotherView";
+            // 
             // EditCarForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.CausesValidation = false;
             this.ClientSize = new System.Drawing.Size(774, 513);
+            this.Controls.Add(this.statusStrip1);
+            this.Controls.Add(this.menuStrip1);
             this.Controls.Add(this.carEditFormCancelButton);
             this.Controls.Add(this.carEditFormOKButton);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Controls.Add(this.carsListView);
+            this.MainMenuStrip = this.menuStrip1;
             this.Name = "EditCarForm";
             this.Text = "Cars to modify";
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
             this.tableLayoutPanel2.ResumeLayout(false);
             this.tableLayoutPanel2.PerformLayout();
+            this.statusStrip1.ResumeLayout(false);
+            this.statusStrip1.PerformLayout();
+            this.menuStrip1.ResumeLayout(false);
+            this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -267,5 +364,15 @@
         private System.Windows.Forms.Button carEditFormOKButton;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button carEditFormCancelButton;
+        private System.Windows.Forms.StatusStrip statusStrip1;
+        private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel1;
+        private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel2;
+        private System.Windows.Forms.MenuStrip menuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem option1ToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem subOptionX1ToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem subOptionX2ToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem optionXToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem viewToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem anotherViewToolStripMenuItem;
     }
 }

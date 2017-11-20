@@ -12,16 +12,22 @@ namespace CarsForm
 {
     public enum CarListOperations { CarRemove = 0, CarAdd = 1, CarEdit = 2 };
 
-
     public partial class CarsForm : Form
     {
         List<Car> cars = new List<Car>();
+
+        public bool closing = false;
 
         public CarsForm()
         {
             this.IsMdiContainer = true;
             InitializeComponent();
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            FilteredView filteredView = new FilteredView(this);
+            // Set the Parent Form of the Child window.
+            filteredView.MdiParent = this;
+            // Display the new form.
+            filteredView.Show();
         }
 
         public void addCar(ref Car car)
@@ -101,21 +107,31 @@ namespace CarsForm
             filteredView.updateView(cars);
         }
 
-        public void getFilteredResults(UpdateableView view, int value, bool moreThan)
+        public void getFilteredResults(UpdateableView view, int value, bool moreThan, bool lessThan)
         {
             List<Car> filteredCars = new List<Car>();
-            foreach(Car c in cars)
+            foreach (Car c in cars)
             {
-                if(moreThan && c.MaxSpeed > value)
+                if (moreThan || lessThan)
                 {
-                    filteredCars.Add(c);
+                    if (moreThan && c.MaxSpeed > value)
+                    {
+                        filteredCars.Add(c);
+                    }
+                    else if (!moreThan && c.MaxSpeed < value)
+                    {
+                        filteredCars.Add(c);
+                    }
                 }
-                else if(!moreThan && c.MaxSpeed < value)
-                {
+                else
                     filteredCars.Add(c);
-                }
             }
             view.updateView(filteredCars);
+        }
+
+        private void CarsForm_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            closing = true;
         }
     }
 }

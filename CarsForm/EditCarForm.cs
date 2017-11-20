@@ -59,6 +59,7 @@ namespace CarsForm
                     carsListView.Items.Remove(item);
                 }
             }
+            toolStripStatusLabel2.Text = carsListView.Items.Count.ToString();
         }
 
         public void updateView(List<Car> newCarList)
@@ -78,6 +79,7 @@ namespace CarsForm
                 item.SubItems[3].Text = car.Type;
             }
             carsListView.Invalidate();
+            toolStripStatusLabel2.Text = carsListView.Items.Count.ToString();
         }
 
         private void carsListView_ItemSelectionChanged(object sender, ListViewItemSelectionChangedEventArgs e)

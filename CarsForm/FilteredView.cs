@@ -84,13 +84,15 @@ namespace CarsForm
 
         private void lessFilterCheckBox_CheckedChanged(object sender, EventArgs e)
         {
-            moreFilterCheckBox.Checked = !lessFilterCheckBox.Checked;
+            if(lessFilterCheckBox.Checked)
+                moreFilterCheckBox.Checked = !lessFilterCheckBox.Checked;
             getFilteredResults();
         }
 
         private void moreFilterCheckBox_CheckedChanged(object sender, EventArgs e)
         {
-            lessFilterCheckBox.Checked = !moreFilterCheckBox.Checked;
+            if(moreFilterCheckBox.Checked)
+                lessFilterCheckBox.Checked = !moreFilterCheckBox.Checked;
             getFilteredResults();
         }
 
@@ -98,12 +100,21 @@ namespace CarsForm
         {
             int value;
             if(int.TryParse(speedFilterTextBox.Text, out value))
-                mainFormHandle.getFilteredResults(this, value, moreFilterCheckBox.Checked);
+                mainFormHandle.getFilteredResults(this, value, moreFilterCheckBox.Checked, lessFilterCheckBox.Checked);
         }
 
         private void speedFilterTextBox_TextChanged(object sender, EventArgs e)
         {
             getFilteredResults();
+        }
+
+        private void FilteredView_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            if (e.CloseReason == CloseReason.MdiFormClosing)
+                return;
+            if (mainFormHandle.MdiChildren.Count<Form>() > 0 &&
+                this == mainFormHandle.MdiChildren[0])
+                e.Cancel = true;
         }
     }
 }

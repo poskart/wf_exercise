@@ -59,6 +59,19 @@
     <Compile Include="CarsForm.Designer.cs">
       <DependentUpon>CarsForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="CarTypeControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CarTypeControl.Designer.cs">
+      <DependentUpon>CarTypeControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CarTypeEditor.cs" />
+    <Compile Include="CarTypeEditorTestControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CarTypeEditorTestControl.Designer.cs">
+      <DependentUpon>CarTypeEditorTestControl.cs</DependentUpon>
+    </Compile>
     <Compile Include="EditCarForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -85,6 +98,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="CarsForm.resx">
       <DependentUpon>CarsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CarTypeControl.resx">
+      <DependentUpon>CarTypeControl.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="EditCarForm.resx">
       <DependentUpon>EditCarForm.cs</DependentUpon>

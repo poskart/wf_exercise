@@ -144,7 +144,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
             this.CancelButton = this.carEditFormCancelButton;
-            this.ClientSize = new System.Drawing.Size(377, 215);
+            this.ClientSize = new System.Drawing.Size(382, 373);
             this.Controls.Add(this.carEditFormCancelButton);
             this.Controls.Add(this.carEditFormOKButton);
             this.Controls.Add(this.dateTimePickerCarProduction);

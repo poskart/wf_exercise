@@ -41,7 +41,14 @@
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
             this.toolStripStatusLabel2 = new System.Windows.Forms.ToolStripStatusLabel();
+            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.option1ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.subOption1ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.subOption2ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.option2ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.statusStrip1.SuspendLayout();
+            this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // filteredCarsListView
@@ -51,9 +58,9 @@
             this.columnHeaderMaxSpeed,
             this.columnHeaderDate,
             this.columnHeaderType});
-            this.filteredCarsListView.Location = new System.Drawing.Point(12, 28);
+            this.filteredCarsListView.Location = new System.Drawing.Point(12, 43);
             this.filteredCarsListView.Name = "filteredCarsListView";
-            this.filteredCarsListView.Size = new System.Drawing.Size(335, 460);
+            this.filteredCarsListView.Size = new System.Drawing.Size(335, 445);
             this.filteredCarsListView.TabIndex = 0;
             this.filteredCarsListView.UseCompatibleStateImageBehavior = false;
             this.filteredCarsListView.View = System.Windows.Forms.View.Details;
@@ -77,7 +84,7 @@
             // lessFilterCheckBox
             // 
             this.lessFilterCheckBox.AutoSize = true;
-            this.lessFilterCheckBox.Location = new System.Drawing.Point(382, 58);
+            this.lessFilterCheckBox.Location = new System.Drawing.Point(381, 73);
             this.lessFilterCheckBox.Name = "lessFilterCheckBox";
             this.lessFilterCheckBox.Size = new System.Drawing.Size(44, 17);
             this.lessFilterCheckBox.TabIndex = 1;
@@ -90,7 +97,7 @@
             this.moreFilterCheckBox.AutoSize = true;
             this.moreFilterCheckBox.Checked = true;
             this.moreFilterCheckBox.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.moreFilterCheckBox.Location = new System.Drawing.Point(382, 81);
+            this.moreFilterCheckBox.Location = new System.Drawing.Point(381, 96);
             this.moreFilterCheckBox.Name = "moreFilterCheckBox";
             this.moreFilterCheckBox.Size = new System.Drawing.Size(49, 17);
             this.moreFilterCheckBox.TabIndex = 2;
@@ -101,7 +108,7 @@
             // carSpeedLabelMoreLess
             // 
             this.carSpeedLabelMoreLess.AutoSize = true;
-            this.carSpeedLabelMoreLess.Location = new System.Drawing.Point(379, 28);
+            this.carSpeedLabelMoreLess.Location = new System.Drawing.Point(378, 43);
             this.carSpeedLabelMoreLess.Name = "carSpeedLabelMoreLess";
             this.carSpeedLabelMoreLess.Size = new System.Drawing.Size(77, 13);
             this.carSpeedLabelMoreLess.TabIndex = 3;
@@ -110,7 +117,7 @@
             // thanLabelMoreLess
             // 
             this.thanLabelMoreLess.AutoSize = true;
-            this.thanLabelMoreLess.Location = new System.Drawing.Point(450, 71);
+            this.thanLabelMoreLess.Location = new System.Drawing.Point(449, 86);
             this.thanLabelMoreLess.Name = "thanLabelMoreLess";
             this.thanLabelMoreLess.Size = new System.Drawing.Size(28, 13);
             this.thanLabelMoreLess.TabIndex = 4;
@@ -118,7 +125,7 @@
             // 
             // speedFilterTextBox
             // 
-            this.speedFilterTextBox.Location = new System.Drawing.Point(506, 68);
+            this.speedFilterTextBox.Location = new System.Drawing.Point(505, 83);
             this.speedFilterTextBox.Name = "speedFilterTextBox";
             this.speedFilterTextBox.Size = new System.Drawing.Size(100, 20);
             this.speedFilterTextBox.TabIndex = 5;
@@ -148,6 +155,44 @@
             this.toolStripStatusLabel2.Size = new System.Drawing.Size(13, 17);
             this.toolStripStatusLabel2.Text = "0";
             // 
+            // menuStrip1
+            // 
+            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.option1ToolStripMenuItem,
+            this.option2ToolStripMenuItem});
+            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip1.Name = "menuStrip1";
+            this.menuStrip1.Size = new System.Drawing.Size(632, 24);
+            this.menuStrip1.TabIndex = 7;
+            this.menuStrip1.Text = "menuStrip1";
+            // 
+            // option1ToolStripMenuItem
+            // 
+            this.option1ToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.subOption1ToolStripMenuItem,
+            this.subOption2ToolStripMenuItem});
+            this.option1ToolStripMenuItem.Name = "option1ToolStripMenuItem";
+            this.option1ToolStripMenuItem.Size = new System.Drawing.Size(62, 20);
+            this.option1ToolStripMenuItem.Text = "Option1";
+            // 
+            // subOption1ToolStripMenuItem
+            // 
+            this.subOption1ToolStripMenuItem.Name = "subOption1ToolStripMenuItem";
+            this.subOption1ToolStripMenuItem.Size = new System.Drawing.Size(137, 22);
+            this.subOption1ToolStripMenuItem.Text = "SubOption1";
+            // 
+            // subOption2ToolStripMenuItem
+            // 
+            this.subOption2ToolStripMenuItem.Name = "subOption2ToolStripMenuItem";
+            this.subOption2ToolStripMenuItem.Size = new System.Drawing.Size(137, 22);
+            this.subOption2ToolStripMenuItem.Text = "SubOption2";
+            // 
+            // option2ToolStripMenuItem
+            // 
+            this.option2ToolStripMenuItem.Name = "option2ToolStripMenuItem";
+            this.option2ToolStripMenuItem.Size = new System.Drawing.Size(62, 20);
+            this.option2ToolStripMenuItem.Text = "Option2";
+            // 
             // FilteredView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -155,16 +200,21 @@
             this.CausesValidation = false;
             this.ClientSize = new System.Drawing.Size(632, 525);
             this.Controls.Add(this.statusStrip1);
+            this.Controls.Add(this.menuStrip1);
             this.Controls.Add(this.speedFilterTextBox);
             this.Controls.Add(this.thanLabelMoreLess);
             this.Controls.Add(this.carSpeedLabelMoreLess);
             this.Controls.Add(this.moreFilterCheckBox);
             this.Controls.Add(this.lessFilterCheckBox);
             this.Controls.Add(this.filteredCarsListView);
+            this.MainMenuStrip = this.menuStrip1;
             this.Name = "FilteredView";
             this.Text = "Filtered Cars";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FilteredView_FormClosing);
             this.statusStrip1.ResumeLayout(false);
             this.statusStrip1.PerformLayout();
+            this.menuStrip1.ResumeLayout(false);
+            this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -185,5 +235,11 @@
         private System.Windows.Forms.StatusStrip statusStrip1;
         private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel1;
         private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel2;
+        private System.Windows.Forms.MenuStrip menuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem option1ToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem subOption1ToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem subOption2ToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem option2ToolStripMenuItem;
+        private System.ComponentModel.BackgroundWorker backgroundWorker1;
     }
 }
